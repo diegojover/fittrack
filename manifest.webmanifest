@@ -1,0 +1,1 @@
+{"name":"FitTrack — Treino pessoal","short_name":"FitTrack","description":"O teu plano de treino e progresso pessoal.","start_url":"./","scope":"./","display":"standalone","background_color":"#f6f8f6","theme_color":"#123b2f","lang":"pt-PT","icons":[{"src":"assets/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}
