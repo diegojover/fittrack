@@ -87,7 +87,7 @@
    if(!reps.trim()||reps.length>40){toast("Indica repetições válidas.");return}
    state.exerciseTargets[id]={sets:Number(sets),reps:reps.trim()};
    save();refreshEditor();render();
-   if(document.getElementById("exerciseDialog").open)openExercise(id);
+   if(document.getElementById("exerciseDialog").open){const stats=document.querySelectorAll("#dialogContent .training-stat strong");if(stats.length===2){stats[0].textContent=sets;stats[1].textContent=reps.trim()}const meta=document.querySelector("#dialogContent .dialog-meta");if(meta)meta.textContent=sets+" séries · "+reps.trim()+" · "+ex.gear;}
    toast("Objetivo do exercício atualizado");
   }
  });
