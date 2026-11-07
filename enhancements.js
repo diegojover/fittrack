@@ -1,4 +1,13 @@
 /* FitTrack v1.1 — improvements; keeps the original localStorage key and workout history. */
+document.addEventListener("click",event=>{
+ const button=event.target.closest("[data-dialog-done]");
+ if(!button)return;
+ event.stopImmediatePropagation();
+ const day=dateFrom(button.dataset.targetDate||iso(new Date()));
+ setDone(day,button.dataset.dialogDone,true);
+ document.getElementById("exerciseDialog").close();
+ toast("Exercício concluído");
+},true);
 const originalArt=art;
 const originalRenderHome=renderHome;
 const originalRenderProgress=renderProgress;
